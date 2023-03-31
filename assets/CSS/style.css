@@ -1,0 +1,22 @@
+
+:root{
+    --header--bg:#009688;
+    --body--bg:#d9dbd3;
+
+}
+#app_header{
+height: 100px;
+background-color:var(--header--bg);
+z-index: -1;
+}
+.my_body{
+    background-color: var(--body--bg);
+}
+
+
+.my_app{
+    width: 100%;
+    height: 600px;
+    background-color: aquamarine;
+    margin-top: -50px;
+}
