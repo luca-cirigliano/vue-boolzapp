@@ -49,6 +49,11 @@ p{
     height: 50px;
     width: 100%;
 }
+.contacts_bottom{
+    background-color: var(--header-message-contacts);
+    height: 50px;
+    width: 100%;
+}
 .contacts_top{
     background-color: var(--header-message-contacts);
     height: 50px;
