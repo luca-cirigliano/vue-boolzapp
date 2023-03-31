@@ -72,6 +72,6 @@ p {
 .contacts .fa-solid{
     color:var(--ico--bg);
 }
-.message .fa-solid{
+.message .fa-solid,.fa-regular{
     color:var(--ico--bg);
 }
