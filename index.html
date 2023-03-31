@@ -26,12 +26,12 @@
 
         <div class="container">
 
-            <div id="app " class="my_app d-flex">
+            <div id="app" class="my_app d-flex">
                 <div class="contacts d-flex flex-column overflow-hidden">
                     <div class="contacts_top d-flex justify-content-between align-items-center">
                         <div class="image_contacts d-flex align-items-center">
-                            <a href="#"><img class="img-fluid rounded-circle ms-2" width="35" src="./assets/img/avatar_io.jpg"
-                                alt=""></a>
+                            <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
+                                    src="./assets/img/avatar_io.jpg" alt=""></a>
                             <div class="descriptions d-flex flex-column ms-2 mb-2">
                                 <h6>Sofia</h6>
                             </div>
@@ -56,21 +56,29 @@
                     <nav class="mt-2">
                         <div class="container-fluid">
                             <form class="d-flex align-items-center" role="search">
-                                <input class="form-control ps-4" type="search" placeholder="   Cerca o inizia una nuova chat"
-                                    aria-label="">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </form>
+                                <input class="form-control ps-4" type="search"
+                                    placeholder="   Cerca o inizia una nuova chat" aria-label="">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </form>
                         </div>
                     </nav>
+                    <div class="open_chats p-4">
+                        <div class="contatto  d-flex flex-column ">
+                            <span class="mb-0" v-for="(contact, index) in contacts">{{contact.name}}</span> 
+                            <div class="circle">
+                             <span class="mb-0" v-for="(contact, index) in contacts">{{contact.avatar}}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="message d-flex justify-content-between flex-column">
                     <div class="message_top">
                         <div class="contact d-flex align-items-md-center justify-content-between ">
                             <div class="image_contacts d-flex align-items-center">
-                                <a href="#"><img class="img-fluid rounded-circle ms-2" width="35" src="./assets/img/avatar_1.jpg"
-                                    alt=""></a>
+                                <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
+                                        src="./assets/img/avatar_1.jpg" alt=""></a>
                                 <div class="descriptions d-flex flex-column justify-content-center ms-2">
-                                     <h6 class="mt-1">Michele</h6>
+                                    <h6 class="mt-1">Michele</h6>
                                     <p>Ultimo accesso ogi alle 12:00</p>
                                 </div>
                             </div>
@@ -79,17 +87,17 @@
                                 <a href="#"> <i class="fa-solid fa-paperclip mx-1"></i></a>
                                 <a href="#"> <i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                             </div>
-                           
+
                         </div>
                         <div class="chatbox d-flex flex-column p-5">
-                            <div class="chat_green rounded-2 m-2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, aliquid!
+                            <div class="chat_green rounded-2 m-2 align-self-end">
+                                Lorem ipsum, dolor sit amet
                             </div>
                             <div class="chat_green rounded-2 m-2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, aliquid!
+                                Lorem ipsum, dolor sit amet
                             </div>
                             <div class="chat_white rounded-2 m-2">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, aliquid!
+                                Lorem ipsum, dolor sit amet
                             </div>
                         </div>
 
