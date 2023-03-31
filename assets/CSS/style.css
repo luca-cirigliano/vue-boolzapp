@@ -2,7 +2,11 @@
 :root{
     --header--bg:#009688;
     --body--bg:#d9dbd3;
+    --header-message-contacts:#eaeaea;
 
+}
+img{
+    max-width: 100%;
 }
 #app_header{
 height: 100px;
@@ -16,7 +20,36 @@ z-index: -1;
 
 .my_app{
     width: 100%;
-    height: 600px;
-    background-color: aquamarine;
-    margin-top: -50px;
+    height: 670px;
+    background-color:white;
+    margin-top: -80px;
+}
+/* da cancellare */
+.contacts,
+.message{
+border: dashed;
+
+}
+/* da cancellare */
+.message{
+    width: 60%;
+    background-image: url(../img/mine.jpg);
+    background-size:auto;
+}
+.contacts{
+    width: 40%;
+}
+.message_top{
+    background-color: var(--header-message-contacts);
+    height: 50px;
+    width: 100%;
+}
+.message_bottom{
+    background-color: var(--header-message-contacts);
+    height: 50px;
+    width: 100%;
+}
+.contacts_top{
+    background-color: var(--header-message-contacts);
+    height: 50px;
 }
