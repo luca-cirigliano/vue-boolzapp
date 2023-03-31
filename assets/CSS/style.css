@@ -1,60 +1,77 @@
-
-:root{
-    --header--bg:#009688;
-    --body--bg:#d9dbd3;
-    --header-message-contacts:#eaeaea;
-
+:root {
+    --header--bg: #009688;
+    --body--bg: #d9dbd3;
+    --header-message-contacts: #eaeaea;
+    --notifications--bg: #8edafc;
+    --ico--bg:#a0a0a0;
 }
-img{
+
+img {
     max-width: 100%;
 }
-#app_header{
-height: 100px;
-background-color:var(--header--bg);
-z-index: -1;
+
+#app_header {
+    height: 100px;
+    background-color: var(--header--bg);
+    z-index: -1;
 }
-.my_body{
+
+.my_body {
     background-color: var(--body--bg);
 }
 
 h6,
-p{
+p {
     line-height: 0.1;
 }
-.my_app{
+
+.my_app {
     width: 100%;
     height: 670px;
-    background-color:white;
+    background-color: white;
     margin-top: -80px;
 }
+
 /* da cancellare */
 
 /* da cancellare */
-.message{
+.message {
     width: 60%;
     background-image: url(../img/mine.jpg);
-    background-size:auto;
+    background-size: auto;
     border-left: solid 0.01px rgb(165, 163, 163);
 }
-.contacts{
+
+.contacts {
     width: 40%;
 }
-.message_top{
+
+.message_top {
     background-color: var(--header-message-contacts);
     height: 50px;
     width: 100%;
 }
-.message_bottom{
+
+.message_bottom {
     background-color: var(--header-message-contacts);
     height: 50px;
     width: 100%;
 }
-.contacts_bottom{
+
+.contacts_top {
     background-color: var(--header-message-contacts);
     height: 50px;
-    width: 100%;
 }
-.contacts_top{
-    background-color: var(--header-message-contacts);
-    height: 50px;
+
+.notifications {
+    width: 100%;
+    height: auto;
+    line-height: 0.5;
+    background-color:var(--notifications--bg) ;
+}
+.contacts .fa-solid{
+    color:var(--ico--bg);
+}
+.message .fa-solid{
+    color:var(--ico--bg);
 }

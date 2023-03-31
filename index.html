@@ -27,25 +27,38 @@
         <div class="container">
 
             <div id="app " class="my_app d-flex">
-                <div class="contacts d-flex justify-content-between flex-column">
+                <div class="contacts d-flex flex-column">
                     <div class="contacts_top d-flex justify-content-between align-items-center">
-
-                            <div class="image_contacts d-flex align-items-center">
-                                <img class="img-fluid rounded-circle ms-2" width="35" src="./assets/img/avatar_io.jpg"
-                                    alt="">
-                                <div class="descriptions d-flex flex-column ms-2">
-                                    <h6 class="mt-1">Sofia</h6>
-                                </div>
+                        <div class="image_contacts d-flex align-items-center">
+                            <img class="img-fluid rounded-circle ms-2" width="35" src="./assets/img/avatar_io.jpg"
+                                alt="">
+                            <div class="descriptions d-flex flex-column ms-2 mb-2">
+                                <h6>Sofia</h6>
                             </div>
-                            <div class="actions_contacts me-3 d-flex align-items-center">
-                                <i class="fa-solid fa-circle-notch mx-1"></i>
-                                <i class="fa-solid fa-message mx-1"></i>
-                                <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
-                            </div>
-                    </div>
-                    <div class="contacts_bottom">
+                        </div>
+                        <div class="actions_contacts me-3 d-flex align-items-center">
+                            <i class="fa-solid fa-circle-notch mx-1"></i>
+                            <i class="fa-solid fa-message mx-1"></i>
+                            <i class="fa-solid fa-ellipsis-vertical mx-2"></i>
+                        </div>
 
                     </div>
+
+                    <div class="notifications d-flex align-items-center p-4 ">
+                        <div class="ico">
+                            <i class="fa-solid fa-bell-slash rounded-circle bg-white p-3"></i>
+                        </div>
+                        <div class="ico_text ms-2">
+                            <h6 class="">Ricevi notifiche di nuovi messaggi</h6>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <nav class="mt-2">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <input class="form-control rounded-0 py-2" type="search" placeholder="Cerca o inizia una nuova chat" aria-label=""><!-- fatti dire come si mette l'icona del search -->
+                        </div>
+                    </nav>
                 </div>
                 <div class="message d-flex justify-content-between flex-column">
                     <div class="message_top">
