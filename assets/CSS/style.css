@@ -17,7 +17,10 @@ z-index: -1;
     background-color: var(--body--bg);
 }
 
-
+h6,
+p{
+    line-height: 0.1;
+}
 .my_app{
     width: 100%;
     height: 670px;
@@ -25,16 +28,13 @@ z-index: -1;
     margin-top: -80px;
 }
 /* da cancellare */
-.contacts,
-.message{
-border: dashed;
 
-}
 /* da cancellare */
 .message{
     width: 60%;
     background-image: url(../img/mine.jpg);
     background-size:auto;
+    border-left: solid 0.01px rgb(165, 163, 163);
 }
 .contacts{
     width: 40%;
