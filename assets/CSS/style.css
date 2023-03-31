@@ -4,6 +4,7 @@
     --header-message-contacts: #eaeaea;
     --notifications--bg: #8edafc;
     --ico--bg:#a0a0a0;
+    --chat-green:#d5f9ba;
 }
 
 img {
@@ -83,4 +84,13 @@ position: relative;
     position: absolute;
     left: 20px;
     margin-left: 5px;
+}
+.chat_green{
+background-color: var(--chat-green);
+width: 200px;
+align-items: end;
+}
+.chat_white{
+    background-color: white;
+    width: 200px;
 }
