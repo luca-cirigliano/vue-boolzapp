@@ -64,9 +64,11 @@
                     </nav>
                     <div class="open_chats p-4">
                         <div class="contatto  d-flex flex-column ">
-                            <span class="mb-0" v-for="(contact, index) in contacts">{{contact.name}}</span> 
+                            <span class="mb-3" v-for="(contact, index) in contacts">
+                                <img width="30" class="rounded-5" :src="contact.avatar" alt="">{{contact.name}}
+                            </span> 
                              <div class="" v-for="(contact, index) in contacts">
-                                <img width="10" :src="contact.avatar" alt="">
+                                
                              </div>
                         </div>
                     </div>
