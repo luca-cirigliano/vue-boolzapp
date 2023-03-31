@@ -13,7 +13,7 @@ img {
 #app_header {
     height: 100px;
     background-color: var(--header--bg);
-    z-index: -1;
+    z-index: 1;
 }
 
 .my_body {
@@ -30,6 +30,7 @@ p {
     height: 670px;
     background-color: white;
     margin-top: -80px;
+
 }
 
 /* da cancellare */
@@ -74,4 +75,12 @@ p {
 }
 .message .fa-solid,.fa-regular{
     color:var(--ico--bg);
+}
+.contacts nav {
+position: relative;    
+}
+.contacts nav i{
+    position: absolute;
+    left: 20px;
+    margin-left: 5px;
 }

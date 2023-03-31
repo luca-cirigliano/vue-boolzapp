@@ -22,12 +22,12 @@
 
     </header>
     <!-- /#app_header -->
-    <main id="app_main">
+    <main id="app_main" class="">
 
         <div class="container">
 
             <div id="app " class="my_app d-flex">
-                <div class="contacts d-flex flex-column">
+                <div class="contacts d-flex flex-column overflow-hidden">
                     <div class="contacts_top d-flex justify-content-between align-items-center">
                         <div class="image_contacts d-flex align-items-center">
                             <a href="#"><img class="img-fluid rounded-circle ms-2" width="35" src="./assets/img/avatar_io.jpg"
@@ -55,9 +55,11 @@
                     </div>
                     <nav class="mt-2">
                         <div class="container-fluid">
-                            <form class="d-flex" role="search">
-                                <input class="form-control" type="search" placeholder="Cerca o inizia una nuova chat"
-                                    aria-label=""><!-- fatti dire come si mette l'icona del search -->
+                            <form class="d-flex align-items-center" role="search">
+                                <input class="form-control ps-4" type="search" placeholder="   Cerca o inizia una nuova chat"
+                                    aria-label="">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </form>
                         </div>
                     </nav>
                 </div>
@@ -84,8 +86,8 @@
                         <a href="#"> <i class="fa-regular fa-face-smile mx-4"></i></a>
                         <div class="container-fluid">
                             <form class="d-flex" role="search">
-                                <input class="form-control" type="search" placeholder="Cerca o inizia una nuova chat"
-                                    aria-label=""><!-- fatti dire come si mette l'icona del search -->
+                                <input class="form-control" type="input" placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="">
                         </div>
                         <a href="#"><i class="fa-solid fa-microphone me-4 ms-2"></i></a>
                     </div>
