@@ -80,7 +80,7 @@
                                         :src="contacts[activeChat].avatar" alt=""></a>
                                 <div class="descriptions d-flex flex-column justify-content-center ms-2">
                                     <span>{{contacts[activeChat].name}}</span>
-                                    <p class="mt-2" v-for="message in contacts[activeChat].messages">Ultimo accesso oggi alle:{{message.date}}</p>
+                                    <p class="mt-2">Ultimo accesso oggi alle 10:20</p>
                                 </div>
                             </div>
                             <div class="actions_contacts me-3">
@@ -103,7 +103,8 @@
                         <a href="#"> <i class="fa-regular fa-face-smile mx-4"></i></a>
                         <div class="container-fluid">
                             <form class="d-flex">
-                                <input class="input w-100"  type="input" placeholder="Scrivi il tuo messaggio qui" v-model="newMessage">
+                                <input class="input w-100"  type="input" placeholder="Scrivi il tuo messaggio qui" v-model="newMessage" @keyup.enter="createNewMessage">
+                                <button class="ms-4" @click="createNewMessage">Invia</button>
                             </form>
                         </div>
                         <a href="#"><i class="fa-solid fa-microphone me-4 ms-2"></i></a>

@@ -15,7 +15,11 @@ createApp({
                 avatar: '/assets/img/avatar_io.jpg',
                 name: 'Sofia'
             },
-            newMessage:'',
+            createNewMessage:{
+                date: '10/01/2020 15:50:00',
+                text: '',
+                status: 'sent'
+            },
             activeChat: 0,
             contacts: [
                 {
@@ -186,6 +190,10 @@ createApp({
     methods: {
         chatUserClick(index){
             this.activeChat = index
-        }
+        },
+        createNewMessage(){
+            this.contacts.push()
+        
+           },
     }
 }).mount('#app')
