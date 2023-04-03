@@ -15,6 +15,7 @@ createApp({
                 avatar: '/assets/img/avatar_io.jpg',
                 name: 'Sofia'
             },
+            newMessage:'',
             activeChat: 0,
             contacts: [
                 {

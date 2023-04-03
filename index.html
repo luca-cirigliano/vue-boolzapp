@@ -74,13 +74,13 @@
                 </div>
                 <div class="message d-flex justify-content-between flex-column">
                     <div class="message_top">
-                        <div class="contact d-flex align-items-md-center justify-content-between ">
+                        <div class="contact d-flex align-items-center justify-content-between mt-2">
                             <div class="image_contacts d-flex align-items-center">
                                 <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
                                         :src="contacts[activeChat].avatar" alt=""></a>
-                                <div class="descriptions d-flex flex-column justify-content-center ms-2" >
+                                <div class="descriptions d-flex flex-column justify-content-center ms-2">
                                     <span>{{contacts[activeChat].name}}</span>
-                                    <p class="mt-2" v-for="date in contacts[activeChat].date">Ultimo accesso oggi alle:{{contacts[activeChat].date}}</p>
+                                    <p class="mt-2" v-for="message in contacts[activeChat].messages">Ultimo accesso oggi alle:{{message.date}}</p>
                                 </div>
                             </div>
                             <div class="actions_contacts me-3">
@@ -89,18 +89,22 @@
                                 <a href="#"> <i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                             </div>
                         </div>
+                       
                         <div class="chatbox d-flex flex-column p-4" v-for="message in contacts[activeChat].messages">
-                            <div class="rounded-2 m-2 align-self-" :class="message.status">
+
+                            <div class="rounded-2 m-2 d-flex flex-column" :class="message.status">
                                 {{message.message}}
+
+                                <span class="mt-2 d-flex align-self-end">{{message.date}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="message_bottom d-flex align-items-center">
                         <a href="#"> <i class="fa-regular fa-face-smile mx-4"></i></a>
                         <div class="container-fluid">
-                            <form class="d-flex" role="search">
-                                <input class="form-control" type="input" placeholder="Cerca o inizia una nuova chat"
-                                    aria-label="">
+                            <form class="d-flex">
+                                <input class="input w-100"  type="input" placeholder="Scrivi il tuo messaggio qui" v-model="newMessage">
+                            </form>
                         </div>
                         <a href="#"><i class="fa-solid fa-microphone me-4 ms-2"></i></a>
                     </div>
