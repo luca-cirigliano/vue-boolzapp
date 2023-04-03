@@ -62,8 +62,8 @@
                         </div>
                     </nav>
                     <div class="open_chats p-4">
-                        <div class="contatto  d-flex flex-column ">
-                            <div @click="chatUserClick(index)" class="mb-3" :class="index === activeChat ? active : ''" v-for="(contact, index) in contacts">
+                        <div class="d-flex flex-column ">
+                            <div @click="chatUserClick(index)" class="mb-3 contatto" :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts">
                                 <img @click="chatUserClick(index)" width="40" class="rounded-5" :src="contact.avatar" alt="">
                                 <span @click="chatUserClick(index)" class="ms-3">{{contact.name}}</span>
                             </div> 
