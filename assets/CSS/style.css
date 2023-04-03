@@ -91,9 +91,17 @@ width: 200px;
 align-items: end;
 align-self:flex-end;
 padding: 0.5rem;
+cursor: pointer;
 }
 .chat_white{
     background-color: white;
     width: 200px;
     padding: 0.5rem;
+    cursor: pointer;
+}
+.image_contacts{
+cursor: pointer;
+}
+.contatto{
+    cursor: pointer;
 }
