@@ -11,7 +11,11 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            activechat: 0,
+            me: {
+                avatar: '/assets/img/avatar_io.jpg',
+                name: 'Sofia'
+            },
+            activeChat: 0,
             contacts: [
                 {
                     name: 'Michele',

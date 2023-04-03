@@ -30,10 +30,9 @@
                 <div class="contacts d-flex flex-column overflow-hidden">
                     <div class="contacts_top d-flex justify-content-between align-items-center">
                         <div class="image_contacts d-flex align-items-center">
-                            <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
-                                    src="./assets/img/avatar_io.jpg" alt=""></a>
+                                <img class="img-fluid rounded-circle ms-2" width="40" :src="`${me.avatar}`" alt="">
                             <div class="descriptions d-flex flex-column ms-2 mb-2">
-                                <h6>Sofia</h6>
+                                <h6>{{me.name}}</h6>
                             </div>
                         </div>
                         <div class="actions_contacts me-3 d-flex align-items-center">
@@ -64,19 +63,17 @@
                     </nav>
                     <div class="open_chats p-4">
                         <div class="contatto  d-flex flex-column ">
-                            <span class="mb-3" v-for="(contact, index) in contacts">
-                                <img width="30" class="rounded-5" :src="contact.avatar" alt="">{{contact.name}}
-                            </span> 
-                             <div class="" v-for="(contact, index) in contacts">
-                                
-                             </div>
+                            <div class="mb-3" v-for="(contact, index) in contacts">
+                                <img width="40" class="rounded-5" :src="contact.avatar" alt="">
+                                <span class="ms-3">{{contact.name}}</span>
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="message d-flex justify-content-between flex-column">
                     <div class="message_top">
                         <div class="contact d-flex align-items-md-center justify-content-between ">
-                            <div class="image_contacts d-flex align-items-center">
+                            <div class="image_contacts d-flex align-items-center" >
                                 <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
                                         src="./assets/img/avatar_1.jpg" alt=""></a>
                                 <div class="descriptions d-flex flex-column justify-content-center ms-2">
