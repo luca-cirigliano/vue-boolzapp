@@ -30,7 +30,7 @@
                 <div class="contacts d-flex flex-column overflow-hidden">
                     <div class="contacts_top d-flex justify-content-between align-items-center">
                         <div class="image_contacts d-flex align-items-center">
-                                <img class="img-fluid rounded-circle ms-2" width="40" :src="`${me.avatar}`" alt="">
+                            <img class="img-fluid rounded-circle ms-2" width="40" :src="`${me.avatar}`" alt="">
                             <div class="descriptions d-flex flex-column ms-2 mb-2">
                                 <h6>{{me.name}}</h6>
                             </div>
@@ -63,22 +63,24 @@
                     </nav>
                     <div class="open_chats p-4">
                         <div class="d-flex flex-column ">
-                            <div @click="chatUserClick(index)" class="mb-3 contatto" :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts">
-                                <img @click="chatUserClick(index)" width="40" class="rounded-5" :src="contact.avatar" alt="">
+                            <div @click="chatUserClick(index)" class="mb-3 contatto"
+                                :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts">
+                                <img @click="chatUserClick(index)" width="40" class="rounded-5" :src="contact.avatar"
+                                    alt="">
                                 <span @click="chatUserClick(index)" class="ms-3">{{contact.name}}</span>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="message d-flex justify-content-between flex-column">
                     <div class="message_top">
                         <div class="contact d-flex align-items-md-center justify-content-between ">
-                            <div class="image_contacts d-flex align-items-center" >
+                            <div class="image_contacts d-flex align-items-center">
                                 <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
-                                    :src="contacts[activeChat].avatar" alt=""></a>
-                                <div class="descriptions d-flex flex-column justify-content-center ms-2">
+                                        :src="contacts[activeChat].avatar" alt=""></a>
+                                <div class="descriptions d-flex flex-column justify-content-center ms-2" >
                                     <span>{{contacts[activeChat].name}}</span>
-                                    <p class="mt-2">Ultimo accesso oggi alle:{{contacts[activeChat].messages.date}}</p>
+                                    <p class="mt-2" v-for="date in contacts[activeChat].date">Ultimo accesso oggi alle:{{contacts[activeChat].date}}</p>
                                 </div>
                             </div>
                             <div class="actions_contacts me-3">
@@ -87,16 +89,14 @@
                                 <a href="#"> <i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                             </div>
                         </div>
-                        <div class="chatbox d-flex flex-column p-5">
+                        <div class="chatbox d-flex flex-column p-5" v-for="message in contacts[activeChat].messages">
                             <div class="chat_green rounded-2 m-2 align-self-end">
-                                {{contacts[activeChat].message}}
+                                {{message.message}}
                             </div>
-                            <div class="chat_green rounded-2 m-2">
-                                {{contacts[activeChat].message}}
-                            </div>
-                            <div class="chat_white rounded-2 m-2">
-                                Lorem ipsum, dolor sit amet
-                            </div>
+
+                        </div>
+                        <div class="chat_white rounded-2 m-2 align-self-start">
+
                         </div>
 
                     </div>
