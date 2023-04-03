@@ -181,5 +181,10 @@ createApp({
             ],
 
         }
+    },
+    methods: {
+        chatUserClick(index){
+            this.activeChat = index
+        }
     }
 }).mount('#app')

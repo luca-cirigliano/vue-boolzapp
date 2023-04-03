@@ -63,9 +63,9 @@
                     </nav>
                     <div class="open_chats p-4">
                         <div class="contatto  d-flex flex-column ">
-                            <div class="mb-3" v-for="(contact, index) in contacts">
-                                <img width="40" class="rounded-5" :src="contact.avatar" alt="">
-                                <span class="ms-3">{{contact.name}}</span>
+                            <div @click="chatUserClick(index)" class="mb-3" :class="index === activeChat ? active : ''" v-for="(contact, index) in contacts">
+                                <img @click="chatUserClick(index)" width="40" class="rounded-5" :src="contact.avatar" alt="">
+                                <span @click="chatUserClick(index)" class="ms-3">{{contact.name}}</span>
                             </div> 
                         </div>
                     </div>
@@ -75,10 +75,10 @@
                         <div class="contact d-flex align-items-md-center justify-content-between ">
                             <div class="image_contacts d-flex align-items-center" >
                                 <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
-                                        src="./assets/img/avatar_1.jpg" alt=""></a>
+                                    :src="contacts[activeChat].avatar" alt=""></a>
                                 <div class="descriptions d-flex flex-column justify-content-center ms-2">
-                                    <h6 class="mt-1">Michele</h6>
-                                    <p>Ultimo accesso ogi alle 12:00</p>
+                                    <span>{{contacts[activeChat].name}}</span>
+                                    <p class="mt-2">Ultimo accesso oggi alle:{{contacts[activeChat].messages.date}}</p>
                                 </div>
                             </div>
                             <div class="actions_contacts me-3">
@@ -86,14 +86,13 @@
                                 <a href="#"> <i class="fa-solid fa-paperclip mx-1"></i></a>
                                 <a href="#"> <i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                             </div>
-
                         </div>
                         <div class="chatbox d-flex flex-column p-5">
                             <div class="chat_green rounded-2 m-2 align-self-end">
-                                Lorem ipsum, dolor sit amet
+                                {{contacts[activeChat].message}}
                             </div>
                             <div class="chat_green rounded-2 m-2">
-                                Lorem ipsum, dolor sit amet
+                                {{contacts[activeChat].message}}
                             </div>
                             <div class="chat_white rounded-2 m-2">
                                 Lorem ipsum, dolor sit amet
