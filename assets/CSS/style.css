@@ -85,7 +85,7 @@ position: relative;
     left: 20px;
     margin-left: 5px;
 }
-.chat_green{
+.received{
 background-color: var(--chat-green);
 width: 200px;
 align-items: end;
@@ -93,11 +93,13 @@ align-self:flex-end;
 padding: 0.5rem;
 cursor: pointer;
 }
-.chat_white{
+.sent{
+    display: flex;
     background-color: white;
     width: 200px;
     padding: 0.5rem;
     cursor: pointer;
+    align-self: start;
 }
 .image_contacts{
 cursor: pointer;

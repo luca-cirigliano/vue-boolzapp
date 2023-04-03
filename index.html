@@ -89,16 +89,11 @@
                                 <a href="#"> <i class="fa-solid fa-ellipsis-vertical mx-2"></i></a>
                             </div>
                         </div>
-                        <div class="chatbox d-flex flex-column p-5" v-for="message in contacts[activeChat].messages">
-                            <div class="chat_green rounded-2 m-2 align-self-end">
+                        <div class="chatbox d-flex flex-column p-4" v-for="message in contacts[activeChat].messages">
+                            <div class="rounded-2 m-2 align-self-" :class="message.status">
                                 {{message.message}}
                             </div>
-
                         </div>
-                        <div class="chat_white rounded-2 m-2 align-self-start">
-
-                        </div>
-
                     </div>
                     <div class="message_bottom d-flex align-items-center">
                         <a href="#"> <i class="fa-regular fa-face-smile mx-4"></i></a>
