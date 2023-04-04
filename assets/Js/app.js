@@ -16,6 +16,7 @@ createApp({
                 name: 'Sofia'
             },
             newMessage: '',
+            nameFilter: '',
             activeChat: 0,
             contacts: [
                 {
@@ -188,8 +189,9 @@ createApp({
             this.activeChat = index
         },
         addNewMessage() {
+       
             this.contacts[this.activeChat].messages.push({
-                date: new Date().toLocaleDateString('locale'), //controlla come si mette una data dinamica con anche l'ora
+                date: new Date().toLocaleDateString('locale'), 
                 message: this.newMessage,
                 status: 'sent'
             })
@@ -197,15 +199,30 @@ createApp({
             this.reply()
 
         },
+
         reply() {
+          
             setTimeout(() => {
+                
                 this.contacts[this.activeChat].messages.push({
-                    date: new Date().toLocaleDateString('locale'),
+                    
+                    date:new Date().toLocaleDateString('locale') ,
+                    message:'ok, va bene!',
                     status: 'received'
                 })
             }, 1000);
         }
 
-
+    },
+    computed: {
+        searchList() {
+            this.contacts.forEach (contact => {
+                if(contact.name.toLowerCase().includes(this.nameFilter.toLowerCase())){
+                    contact.visible = true
+                } else {
+                    contact.visible = false
+                }
+            })
+        }
     }
 }).mount('#app')

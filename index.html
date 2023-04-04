@@ -50,21 +50,20 @@
                     </div>
                     <nav class="mt-2">
                         <div class="container-fluid">
-                            <form class="d-flex align-items-center" role="search">
-                                <input class="form-control ps-4" type="search"
-                                    placeholder="   Cerca o inizia una nuova chat" aria-label="">
+                                <input class="w-100 ps-4" type="text"
+                                    placeholder="  Cerca o inizia una nuova chat" v-model="nameFilter" @keyup.enter="searchList">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                            </form>
                         </div>
                     </nav>
                     <div class="open_chats p-4 overflow-auto">
-                        <div class="d-flex flex-column gap-5 ">
+                        <div class="d-flex flex-column gap-4 ">
                             <div @click="chatUserClick(index)" class="contatto d-flex align-items-center"
                                 :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts">
                                 <img @click="chatUserClick(index)" width="45" class="rounded-5" :src="contact.avatar"
                                     alt="">
                                 <span @click="chatUserClick(index)" class="ms-3 ">{{contact.name}}</span>
                             </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -100,7 +99,7 @@
                     <div class="message_bottom d-flex align-items-center">
                         <a href="#"> <i class="fa-regular fa-face-smile mx-4"></i></a>
                         <div class="container-fluid">
-                            <input class="input w-100" type="text" placeholder="Scrivi il tuo messaggio qui"
+                            <input class="input w-100 rounded-5" type="text" placeholder="  Scrivi il tuo messaggio qui"
                                 v-model="newMessage" @keyup.enter="addNewMessage">
                             <!--                                 <button class="ms-4" @click="createNewMessage">Invia</button> -->
                         </div>
