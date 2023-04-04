@@ -211,10 +211,8 @@ createApp({
                     status: 'received'
                 })
             }, 1000);
-        }
-
-    },
-    computed: {
+            
+        },
         searchList() {
             this.contacts.forEach (contact => {
                 if(contact.name.toLowerCase().includes(this.nameFilter.toLowerCase())){
@@ -225,4 +223,8 @@ createApp({
             })
         }
     }
+
+    
+   
+        
 }).mount('#app')
