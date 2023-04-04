@@ -51,26 +51,26 @@
                     <nav class="mt-2">
                         <div class="container-fluid">
                                 <input class="w-100 ps-4" type="text"
-                                    placeholder="  Cerca o inizia una nuova chat" v-model="nameFilter" @keyup.enter="searchList">
+                                    placeholder="  Cerca o inizia una nuova chat" v-model="nameFilter" @keyup="searchList">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </nav>
                     <div class="open_chats p-4 overflow-auto">
-                        <div class="d-flex flex-column gap-4 ">
-                            <div @click="chatUserClick(index)" class="contatto d-flex align-items-center"
-                                :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts">
-                                <img @click="chatUserClick(index)" width="45" class="rounded-5" :src="contact.avatar"
-                                    alt="">
-                                <span @click="chatUserClick(index)" class="ms-3 ">{{contact.name}}</span>
+                        <div class="d-flex flex-column gap-4" >
+                            <div @click="chatUserClick(index)" class="contatto d-flex align-items-center" :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts" >
+                                <div class="utente_ricercato" v-show="contact.visible" >
+                                    <img width="45" class="rounded-5" :src="contact.avatar"
+                                    alt="" :class=>
+                                <span class="ms-3">{{contact.name}}</span>
+                                </div>
                             </div>
-                           
                         </div>
                     </div>
                 </div>
                 <div class="message d-flex justify-content-between flex-column ">
                     <div class="message_top ">
-                        <div class="contact d-flex align-items-center justify-content-between mt-2">
-                            <div class="image_contacts d-flex align-items-center">
+                        <div class="contact d-flex align-items-start justify-content-between mt-2">
+                            <div class="image_contacts d-flex align-items-center ">
                                 <a href="#"><img class="img-fluid rounded-circle ms-2" width="35"
                                         :src="contacts[activeChat].avatar" alt=""></a>
                                 <div class="descriptions d-flex flex-column justify-content-center ms-2">

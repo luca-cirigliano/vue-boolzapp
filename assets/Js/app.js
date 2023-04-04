@@ -222,9 +222,5 @@ createApp({
                 }
             })
         }
-    }
-
-    
-   
-        
+    }     
 }).mount('#app')

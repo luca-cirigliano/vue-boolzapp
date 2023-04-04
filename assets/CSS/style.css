@@ -121,7 +121,6 @@ p {
 
 .contatto {
     cursor: pointer;
-    border-bottom: solid 1px rgb(230, 227, 227);
 }
 
 .contatto:hover {
