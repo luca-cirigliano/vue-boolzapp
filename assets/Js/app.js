@@ -15,11 +15,7 @@ createApp({
                 avatar: '/assets/img/avatar_io.jpg',
                 name: 'Sofia'
             },
-            createNewMessage:{
-                date: '10/01/2020 15:50:00',
-                text: '',
-                status: 'sent'
-            },
+            newMessage: '',
             activeChat: 0,
             contacts: [
                 {
@@ -188,12 +184,19 @@ createApp({
         }
     },
     methods: {
-        chatUserClick(index){
+        chatUserClick(index) {
             this.activeChat = index
         },
-        createNewMessage(){
-            this.contacts.push()
-        
-           },
+        addNewMessage() {
+            console.log('new message', this.newMessage);
+            this.contacts[this.activeChat].messages.push({
+                date: new Date().toLocaleDateString('locale'), //controlla come si mette una data dinamica con anche l'ora
+                message: this.newMessage,
+                status: 'sent'
+            })
+
+
+        },
+
     }
 }).mount('#app')

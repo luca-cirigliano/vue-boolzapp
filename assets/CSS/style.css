@@ -47,7 +47,9 @@ p {
 .contacts {
     width: 40%;
 }
+.message{
 
+}
 .message_top {
     background-color: var(--header-message-contacts);
     height: 50px;
@@ -58,6 +60,7 @@ p {
     background-color: var(--header-message-contacts);
     height: 50px;
     width: 100%;
+
 }
 
 .contacts_top {
@@ -110,5 +113,8 @@ cursor: pointer;
 .contatto:hover{
     cursor: pointer;
     background-color: rgb(252, 247, 247);
+
+}
+.chat_active{
 
 }
