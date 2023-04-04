@@ -3,8 +3,8 @@
     --body--bg: #d9dbd3;
     --header-message-contacts: #eaeaea;
     --notifications--bg: #8edafc;
-    --ico--bg:#a0a0a0;
-    --chat-green:#d5f9ba;
+    --ico--bg: #a0a0a0;
+    --chat-green: #d5f9ba;
 }
 
 img {
@@ -47,9 +47,9 @@ p {
 .contacts {
     width: 40%;
 }
-.message{
 
-}
+.message {}
+
 .message_top {
     background-color: var(--header-message-contacts);
     height: 50px;
@@ -72,49 +72,60 @@ p {
     width: 100%;
     height: auto;
     line-height: 0.5;
-    background-color:var(--notifications--bg) ;
+    background-color: var(--notifications--bg);
 }
-.contacts .fa-solid{
-    color:var(--ico--bg);
+
+.contacts .fa-solid {
+    color: var(--ico--bg);
 }
-.message .fa-solid,.fa-regular{
-    color:var(--ico--bg);
+
+.message .fa-solid,
+.fa-regular {
+    color: var(--ico--bg);
 }
+
 .contacts nav {
-position: relative;    
+    position: relative;
 }
-.contacts nav i{
+
+.contacts nav i {
     position: absolute;
     left: 20px;
     margin-left: 5px;
 }
-.received{
-background-color: var(--chat-green);
-width: 200px;
-align-items: end;
-align-self:flex-end;
-padding: 0.5rem;
-cursor: pointer;
-}
-.sent{
+
+.received {
     display: flex;
     background-color: white;
+    align-self: self-start;
+    width: 200px;
+    align-items: end;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.sent {
+    display: flex;
+    background-color:var(--chat-green);
+    align-self: self-end;
     width: 200px;
     padding: 0.5rem;
     cursor: pointer;
-    align-self: start;
+
 }
-.image_contacts{
-cursor: pointer;
-}
-.contatto{
+
+.image_contacts {
     cursor: pointer;
 }
-.contatto:hover{
+
+.contatto {
+    cursor: pointer;
+}
+
+.contatto:hover {
     cursor: pointer;
     background-color: rgb(252, 247, 247);
 
 }
-.chat_active{
 
-}
+.chat_active {}

@@ -188,15 +188,25 @@ createApp({
             this.activeChat = index
         },
         addNewMessage() {
-            console.log('new message', this.newMessage);
             this.contacts[this.activeChat].messages.push({
                 date: new Date().toLocaleDateString('locale'), //controlla come si mette una data dinamica con anche l'ora
                 message: this.newMessage,
                 status: 'sent'
             })
-
+            this.newMessage = ''
+            this.reply()
 
         },
+        reply() {
+            setTimeout(() => {
+                this.contacts[this.activeChat].messages.push({
+                    date: new Date().toLocaleDateString('locale'), //controlla come si mette una data dinamica con anche l'ora
+                    message: 'Ok, va bene',
+                    status: 'received'
+                })
+            }, 1000);
+        }
+
 
     }
 }).mount('#app')
