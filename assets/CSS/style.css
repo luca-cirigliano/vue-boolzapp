@@ -48,7 +48,7 @@ p {
     width: 40%;
 }
 
-.message {}
+
 
 .message_top {
     background-color: var(--header-message-contacts);
@@ -120,6 +120,7 @@ p {
 
 .contatto {
     cursor: pointer;
+    border-bottom: solid 1px rgb(230, 227, 227);
 }
 
 .contatto:hover {
@@ -127,5 +128,3 @@ p {
     background-color: rgb(252, 247, 247);
 
 }
-
-.chat_active {}

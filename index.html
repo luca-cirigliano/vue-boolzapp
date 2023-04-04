@@ -57,13 +57,13 @@
                             </form>
                         </div>
                     </nav>
-                    <div class="open_chats p-4">
-                        <div class="d-flex flex-column ">
-                            <div @click="chatUserClick(index)" class="mb-3 contatto"
+                    <div class="open_chats p-4 overflow-auto">
+                        <div class="d-flex flex-column gap-5 ">
+                            <div @click="chatUserClick(index)" class="contatto d-flex align-items-center"
                                 :class="index === activeChat ? active : '' " v-for="(contact, index) in contacts">
-                                <img @click="chatUserClick(index)" width="40" class="rounded-5" :src="contact.avatar"
+                                <img @click="chatUserClick(index)" width="45" class="rounded-5" :src="contact.avatar"
                                     alt="">
-                                <span @click="chatUserClick(index)" class="ms-3">{{contact.name}}</span>
+                                <span @click="chatUserClick(index)" class="ms-3 ">{{contact.name}}</span>
                             </div>
                         </div>
                     </div>

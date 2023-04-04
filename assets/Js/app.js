@@ -200,8 +200,7 @@ createApp({
         reply() {
             setTimeout(() => {
                 this.contacts[this.activeChat].messages.push({
-                    date: new Date().toLocaleDateString('locale'), //controlla come si mette una data dinamica con anche l'ora
-                    message: 'Ok, va bene',
+                    date: new Date().toLocaleDateString('locale'),
                     status: 'received'
                 })
             }, 1000);
