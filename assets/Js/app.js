@@ -215,7 +215,7 @@ createApp({
         },
         searchList() {
             this.contacts.forEach (contact => {
-                if(contact.name.toLowerCase().includes(this.nameFilter.toLowerCase())){
+                if(contact.name.toLowerCase().startsWith(this.nameFilter.toLowerCase())){
                     contact.visible = true
                 } else {
                     contact.visible = false
